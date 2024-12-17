@@ -7,6 +7,14 @@ WORKDIR /app
 
 ENV NODE_ENV production
 
+ENV http_proxy=http://10.190.21.24:3128
+ENV https_proxy=http://10.190.21.24:3128
+ENV no_proxy=localhost,127.0.0.1,.example.com
+ENV HTTP_PROXY=http://10.190.21.24:3128
+ENV HTTPS_PROXY=http://10.190.21.24:3128
+ENV NO_PROXY=localhost,127.0.0.1,.example.com
+
+
 # Copy the package.json and package-lock.json first (for caching)
 COPY package*.json ./
 
